@@ -5,9 +5,10 @@ import { Link, NavLink } from 'react-router-dom'
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
   return (
-    <div className='flex items-center justify-between py-5 max-h-15 font-medium'>
-
-        <img className='h-30 w-auto object-contain' src={assets.logo} alt='logo' />
+    <div className='flex items-center justify-between py-5 max-h-15 font-medium '>
+        <Link to={"/"} className='mr-6 sm:mr-8'>
+        <img className='h-28 sm:h-12 md:h-14 lg:h-16 w-auto object-contain ' src={assets.logo} alt='logo' />
+        </Link>
 
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
             <NavLink to='/' className='flex flex-col items-center gap-1'>
@@ -47,7 +48,7 @@ const Navbar = () => {
                 <img className='w-5 min-w-5' src={assets.bag} alt='bag'  />
                 <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>10</p>
             </Link>
-            <img onClick={()=>setVisible(true)} className='w-5 cursor-pointer sm:hidden'src={assets.list} alt='list' />
+            <img onClick={()=>setVisible(true)} className='w-5 min-w-5 cursor-pointer sm:hidden'src={assets.list} alt='list' />
         </div>
 
         {/* Sidebar menu for small scren */}
