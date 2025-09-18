@@ -4,6 +4,7 @@ import person from "./person.svg";
 import bag from "./bag.svg";
 import list from "./list.svg";
 import dropdown from "./chevron-left.svg"
+import hero from "./hero.jpg"
 
 
 
@@ -15,4 +16,5 @@ export const assets = {
   bag,
   list,
   dropdown,
+  hero
 };
