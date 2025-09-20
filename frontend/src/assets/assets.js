@@ -3,18 +3,21 @@ import search from "./search.svg";
 import person from "./person.svg";
 import bag from "./bag.svg";
 import list from "./list.svg";
-import dropdown from "./chevron-left.svg"
-import hero from "./hero.jpg"
-import p_1 from "./p_1.png"
-import p_2 from "./p_2.png"
-import p_3 from "./p_3.png"
-import p_4 from "./p_4.png"
-import p_5 from "./p_5.png"
-import p_6 from "./p_6.png"
-import p_7 from "./p_7.png"
-import p_8 from "./p_8.png"
-import p_9 from "./p_9.png"
-import p_10 from "./p_10.png"
+import dropdown from "./chevron-left.svg";
+import exchange from "./exchange_icon.png";
+import hero from "./hero.jpg";
+import return_icon from "./return_icon.png";
+import headset from "./headset.svg";
+import p_1 from "./p_1.png";
+import p_2 from "./p_2.png";
+import p_3 from "./p_3.png";
+import p_4 from "./p_4.png";
+import p_5 from "./p_5.png";
+import p_6 from "./p_6.png";
+import p_7 from "./p_7.png";
+import p_8 from "./p_8.png";
+import p_9 from "./p_9.png";
+import p_10 from "./p_10.png";
 
 
 
@@ -26,6 +29,9 @@ export const assets = {
   list,
   dropdown,
   hero,
+  exchange,
+  return_icon,
+  headset,
 
 };
 
