@@ -2,6 +2,7 @@ import React, {use, useContext, useEffect, useState} from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title'
 import {products} from "../assets/assets"
+import ProductItem from './ProductItem'
 
 const LatestCollection = () => {
 
@@ -21,6 +22,16 @@ const LatestCollection = () => {
         This is a sample text to check how the text will look like in this section.
         </p>
     </div>
+
+    {/* Render Products */}
+    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
+      {
+        latestProducts.map((item, index)=>(
+          <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
+        ))
+      }
+    </div>
+
     </div>
   )
 }

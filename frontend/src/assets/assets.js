@@ -5,7 +5,16 @@ import bag from "./bag.svg";
 import list from "./list.svg";
 import dropdown from "./chevron-left.svg"
 import hero from "./hero.jpg"
-
+import p_1 from "./p_1.png"
+import p_2 from "./p_2.png"
+import p_3 from "./p_3.png"
+import p_4 from "./p_4.png"
+import p_5 from "./p_5.png"
+import p_6 from "./p_6.png"
+import p_7 from "./p_7.png"
+import p_8 from "./p_8.png"
+import p_9 from "./p_9.png"
+import p_10 from "./p_10.png"
 
 
 
@@ -17,6 +26,7 @@ export const assets = {
   list,
   dropdown,
   hero,
+
 };
 
 export const products = [
@@ -25,7 +35,7 @@ export const products = [
     name: "Naruto Uzumaki T-Shirt",
     description: "Cotton t-shirt featuring Naruto Uzumaki print",
     price: 799,
-    image: "",
+    image: [p_1],
     category: "Anime",
     subCategory: "T-Shirts",
     sizes: ["S", "M", "L", "XL"],
@@ -37,7 +47,7 @@ export const products = [
     name: "Attack on Titan Survey Corps Hoodie",
     description: "Hoodie with Survey Corps wings of freedom emblem",
     price: 1499,
-    image: "",
+    image: [p_2],
     category: "Anime",
     subCategory: "Hoodies",
     sizes: ["S", "M", "L", "XL"],
@@ -49,7 +59,7 @@ export const products = [
     name: "One Piece Straw Hat Mug",
     description: "Ceramic mug with Straw Hat Pirates logo",
     price: 349,
-    image: "",
+    image: [p_3],
     category: "Anime",
     subCategory: "Mugs",
     sizes: [],
@@ -61,7 +71,7 @@ export const products = [
     name: "Demon Slayer Tanjiro Figurine",
     description: "Detailed collectible figurine of Tanjiro Kamado",
     price: 2199,
-    image: "",
+    image: [p_4],
     category: "Anime",
     subCategory: "Figurines",
     sizes: [],
@@ -73,7 +83,7 @@ export const products = [
     name: "My Hero Academia All Might Poster",
     description: "Premium matte poster of All Might",
     price: 299,
-    image: "",
+    image: [p_5],
     category: "Anime",
     subCategory: "Posters",
     sizes: [],
@@ -85,7 +95,7 @@ export const products = [
     name: "Tokyo Revengers Draken Keychain",
     description: "Acrylic keychain featuring Draken",
     price: 199,
-    image: "",
+    image: [p_6],
     category: "Anime",
     subCategory: "Accessories",
     sizes: [],
@@ -97,7 +107,7 @@ export const products = [
     name: "Dragon Ball Z Goku Hoodie",
     description: "Bright orange hoodie with Goku kanji symbol",
     price: 1399,
-    image: "",
+    image: [p_7],
     category: "Anime",
     subCategory: "Hoodies",
     sizes: ["S", "M", "L", "XL"],
@@ -109,7 +119,7 @@ export const products = [
     name: "Jujutsu Kaisen Yuji Itadori T-Shirt",
     description: "Cotton t-shirt with Yuji Itadori print",
     price: 749,
-    image: "",
+    image: [p_8],
     category: "Anime",
     subCategory: "T-Shirts",
     sizes: ["S", "M", "L", "XL"],
@@ -121,7 +131,7 @@ export const products = [
     name: "Spy x Family Anya Plush",
     description: "Soft plush toy of Anya Forger",
     price: 1199,
-    image: "",
+    image: [p_9],
     category: "Anime",
     subCategory: "Plushies",
     sizes: [],
@@ -133,7 +143,7 @@ export const products = [
     name: "Bleach Soul Reaper Sword Keychain",
     description: "Mini sword keychain from Bleach",
     price: 249,
-    image: "",
+    image: [p_10],
     category: "Anime",
     subCategory: "Accessories",
     sizes: [],
