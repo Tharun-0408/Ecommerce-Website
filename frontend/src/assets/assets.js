@@ -8,6 +8,7 @@ import exchange from "./exchange_icon.png";
 import hero from "./hero.jpg";
 import return_icon from "./return_icon.png";
 import headset from "./headset.svg";
+import filter from "./chevron-right.svg"
 import p_1 from "./p_1.png";
 import p_2 from "./p_2.png";
 import p_3 from "./p_3.png";
@@ -32,6 +33,7 @@ export const assets = {
   exchange,
   return_icon,
   headset,
+  filter
 
 };
 
