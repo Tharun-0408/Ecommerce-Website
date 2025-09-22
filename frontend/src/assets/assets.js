@@ -66,7 +66,7 @@ export const products = [
     price: 799,
     image: [p_1],
     category: "Anime",
-    subCategory: "T-Shirts",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -78,7 +78,7 @@ export const products = [
     price: 1499,
     image: [p_2],
     category: "Anime",
-    subCategory: "Hoodies",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -90,7 +90,7 @@ export const products = [
     price: 349,
     image: [p_3],
     category: "Anime",
-    subCategory: "Mugs",
+    subCategory: "Merchandise",
     sizes: [],
     date: 1716634345448,
     bestseller: false
@@ -102,7 +102,7 @@ export const products = [
     price: 2199,
     image: [p_4],
     category: "Anime",
-    subCategory: "Figurines",
+    subCategory: "Collectibles",
     sizes: [],
     date: 1716634345448,
     bestseller: true
@@ -138,7 +138,7 @@ export const products = [
     price: 1399,
     image: [p_7],
     category: "Anime",
-    subCategory: "Hoodies",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -150,7 +150,7 @@ export const products = [
     price: 749,
     image: [p_8],
     category: "Anime",
-    subCategory: "T-Shirts",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: false
@@ -186,7 +186,7 @@ export const products = [
     price: 599,
     image: [p_11],
     category: "Anime",
-    subCategory: "Caps",
+    subCategory: "Accessories",
     sizes: [],
     date: 1716634345448,
     bestseller: true
@@ -234,7 +234,7 @@ export const products = [
     price: 1599,
     image: [p_15],
     category: "Anime",
-    subCategory: "Hoodies",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: false
@@ -258,7 +258,7 @@ export const products = [
     price: 599,
     image: [p_17],
     category: "Anime",
-    subCategory: "Kitchenware",
+    subCategory: "Merchandise",
     sizes: [],
     date: 1716634345448,
     bestseller: true
@@ -270,7 +270,7 @@ export const products = [
     price: 849,
     image: [p_18],
     category: "Anime",
-    subCategory: "T-Shirts",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -306,7 +306,7 @@ export const products = [
     price: 1499,
     image: [p_21],
     category: "Anime",
-    subCategory: "Hoodies",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -318,7 +318,7 @@ export const products = [
     price: 799,
     image: [p_22],
     category: "Anime",
-    subCategory: "T-Shirts",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -330,7 +330,7 @@ export const products = [
     price: 1999,
     image: [p_23],
     category: "Anime",
-    subCategory: "Jackets",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: false
@@ -342,7 +342,7 @@ export const products = [
     price: 2599,
     image: [p_24],
     category: "Anime",
-    subCategory: "Figurines",
+    subCategory: "Collectibles",
     sizes: [],
     date: 1716634345448,
     bestseller: true
@@ -378,7 +378,7 @@ export const products = [
     price: 1399,
     image: [p_27],
     category: "Anime",
-    subCategory: "Hoodies",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
@@ -390,7 +390,7 @@ export const products = [
     price: 349,
     image: [p_28],
     category: "Anime",
-    subCategory: "Mugs",
+    subCategory: "Merchandise",
     sizes: [],
     date: 1716634345448,
     bestseller: false
@@ -402,7 +402,7 @@ export const products = [
     price: 849,
     image: [p_29],
     category: "Anime",
-    subCategory: "T-Shirts",
+    subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],
     date: 1716634345448,
     bestseller: true
