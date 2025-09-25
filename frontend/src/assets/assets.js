@@ -9,7 +9,10 @@ import hero from "./hero.jpg";
 import return_icon from "./return_icon.png";
 import headset from "./headset.svg";
 import filter from "./chevron-right.svg"
+import cross_icon from "./cross.svg"
+import star from "./rating.png"
 import p_1 from "./p_1.png";
+import p_1a from "./p_1a.png"
 import p_2 from "./p_2.png";
 import p_3 from "./p_3.png";
 import p_4 from "./p_4.png";
@@ -54,7 +57,9 @@ export const assets = {
   exchange,
   return_icon,
   headset,
-  filter
+  filter,
+  cross_icon,
+  star
 
 };
 
@@ -64,7 +69,7 @@ export const products = [
     name: "Naruto Uzumaki T-Shirt",
     description: "Cotton t-shirt featuring Naruto Uzumaki print",
     price: 799,
-    image: [p_1],
+    image: [p_1, p_1a],
     category: "Anime",
     subCategory: "Clothing",
     sizes: ["S", "M", "L", "XL"],

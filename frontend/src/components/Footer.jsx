@@ -7,9 +7,9 @@ const Footer = () => {
         <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
 
             <div>
-                <img src={assets.logo} className='mb-5 w-32' alt='' />
-                <p className='w-full md:w-2/3 text-gray-600'>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, quaerat. In natus minima saepe, voluptate perspiciatis deserunt quis temporibus optio numquam nulla, placeat, soluta officia. Blanditiis voluptas doloremque qui unde?
+                <img src={assets.logo} className='mb-5 pt-1.5 pb-1 w-44' alt='' />
+                <p className='w-full md:w-3/4 text-gray-600'>
+                    <span className='font-semibold text-black'>AnimeVerse - Your one-stop shop for authentic anime merchandise.</span> Discover premium apparel, collectibles, and accessories inspired by your favorite series. We bring high-quality, officially themed products to anime fans everywhere.
                 </p>
             </div>
             <div>
