@@ -9,16 +9,44 @@ const Collection = () => {
   const { products } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
+  const [subCategory, setSubCategory] = useState([]);
+
+  const toggleSubCategory = (e) => {
+
+    if(subCategory.includes(e.target.value)){
+      setSubCategory(prev => prev.filter(item => item !== e.target.value))
+    }
+    else{
+      setSubCategory(prev => [...prev, e.target.value])
+    }
+  }
+
+  const applyFilter = () => {
+
+    let productsCopy = products.slice();
+
+    if(subCategory.length > 0) {
+      productsCopy = products.filter(item => subCategory.includes(item.subCategory));
+    }
+
+    setFilterProducts(productsCopy)
+
+  }
+
 
   useEffect(()=>{
     setFilterProducts(products)
   },[])
 
+  useEffect(()=>{
+    applyFilter();
+  },[subCategory])
+
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
       
     {/*Filter options */}
-    <div className='min-w-60 accent-gray-600'>
+    <div className='min-w-60 accent-blue-500'>
       <p onClick={()=>setShowFilter(prev => !prev)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>FILTERS
         <img className={`h-3 sm:hidden transition-transform duration-100 ease-in-out ${showFilter ? 'rotate-90' : ''}`} src={assets.filter} />
       </p>
@@ -43,22 +71,22 @@ const Collection = () => {
         <p className='mb-3 text-sm font-medium'>TYPE</p>
         <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Accessories'} /> Accessories
+            <input className='w-3 cursor-pointer' type='checkbox' value={'Accessories'} onChange={toggleSubCategory} /> Accessories
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Clothing'} /> Clothing
+            <input className='w-3 cursor-pointer' type='checkbox' value={'Clothing'} onChange={toggleSubCategory} /> Clothing
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Collectibles'} /> Collectibles
+            <input className='w-3 cursor-pointer' type='checkbox' value={'Collectibles'} onChange={toggleSubCategory} /> Collectibles
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Accessories'} /> Accessories
+            <input className='w-3 cursor-pointer' type='checkbox' value={'Merchandise'} onChange={toggleSubCategory} /> Merchandise
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Clothing'} /> Clothing
+            <input className='w-3 cursor-pointer' type='checkbox' value={'Plushies'} onChange={toggleSubCategory} /> Plushies
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Collectibles'} /> Collectibles
+            <input className='w-3 cursor-pointer' type='checkbox' value={'Posters'} onChange={toggleSubCategory} /> Posters
           </p>
    
         </div>
