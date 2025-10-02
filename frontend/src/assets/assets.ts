@@ -11,6 +11,7 @@ import headset from "./headset.svg";
 import filter from "./chevron-right.svg"
 import cross_icon from "./cross.svg"
 import star from "./rating.png"
+import bin from "./bin.svg";
 import p_1 from "./p_1.png";
 import p_1a from "./p_1a.png"
 import p_2 from "./p_2.png";
@@ -59,11 +60,25 @@ export const assets = {
   headset,
   filter,
   cross_icon,
-  star
+  star,
+  bin
 
 };
 
-export const products = [
+export type Product = {
+  _id: string;
+  name: string;
+  description: string;
+  price: number;
+  image: string[];     
+  category: string;
+  subCategory: string;
+  sizes: string[];
+  date: number;
+  bestseller: boolean;
+};
+
+export const products: Product[] = [
   {
     _id: "p1",
     name: "Naruto Uzumaki T-Shirt",
@@ -96,7 +111,7 @@ export const products = [
     image: [p_3],
     category: "Anime",
     subCategory: "Merchandise",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -108,7 +123,7 @@ export const products = [
     image: [p_4],
     category: "Anime",
     subCategory: "Collectibles",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -120,7 +135,7 @@ export const products = [
     image: [p_5],
     category: "Anime",
     subCategory: "Posters",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -132,7 +147,7 @@ export const products = [
     image: [p_6],
     category: "Anime",
     subCategory: "Accessories",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -168,7 +183,7 @@ export const products = [
     image: [p_9],
     category: "Anime",
     subCategory: "Plushies",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -180,7 +195,7 @@ export const products = [
     image: [p_10],
     category: "Anime",
     subCategory: "Accessories",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -192,7 +207,7 @@ export const products = [
     image: [p_11],
     category: "Anime",
     subCategory: "Accessories",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -204,7 +219,7 @@ export const products = [
     image: [p_12],
     category: "Anime",
     subCategory: "Posters",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -216,7 +231,7 @@ export const products = [
     image: [p_13],
     category: "Anime",
     subCategory: "Plushies",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -228,7 +243,7 @@ export const products = [
     image: [p_14],
     category: "Anime",
     subCategory: "Collectibles",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -252,7 +267,7 @@ export const products = [
     image: [p_16],
     category: "Anime",
     subCategory: "Accessories",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -264,7 +279,7 @@ export const products = [
     image: [p_17],
     category: "Anime",
     subCategory: "Merchandise",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -288,7 +303,7 @@ export const products = [
     image: [p_19],
     category: "Anime",
     subCategory: "Posters",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -300,7 +315,7 @@ export const products = [
     image: [p_20],
     category: "Anime",
     subCategory: "Collectibles",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -348,7 +363,7 @@ export const products = [
     image: [p_24],
     category: "Anime",
     subCategory: "Collectibles",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: true
   },
@@ -360,7 +375,7 @@ export const products = [
     image: [p_25],
     category: "Anime",
     subCategory: "Posters",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -372,7 +387,7 @@ export const products = [
     image: [p_26],
     category: "Anime",
     subCategory: "Accessories",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -396,7 +411,7 @@ export const products = [
     image: [p_28],
     category: "Anime",
     subCategory: "Merchandise",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   },
@@ -420,7 +435,7 @@ export const products = [
     image: [p_30],
     category: "Anime",
     subCategory: "Plushies",
-    sizes: [],
+    sizes: ["standard"],
     date: 1716634345448,
     bestseller: false
   }

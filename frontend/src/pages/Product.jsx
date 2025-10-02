@@ -7,7 +7,7 @@ import RelatedProducts from '../components/RelatedProducts';
 const Product = () => {
 
   const {productId} = useParams();
-  const {products, currency} = useContext(ShopContext);
+  const {products, currency, addToCart} = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState('');
   const [size, setSize] = useState('');
@@ -19,12 +19,15 @@ const Product = () => {
       if(item._id === productId){
         setProductData(item);
         setImage(item.image[0]);
-        console.log(item);
         return null;
       }
     })
   }
 
+  useEffect(() => {
+    setAdded(false);
+  },[size])
+  
   useEffect(()=>{
     fetchProductData();
   },[productId, products])
@@ -67,16 +70,15 @@ const Product = () => {
           <div className='flex gap-2'>
             {productData.sizes.map((item, index)=>(
               <button onClick={()=>setSize(item)} 
-                      className={`flex items-center justify-center border border-gray-400 w-12 h-12 rounded-xl cursor-pointer ${item === size ? 'bg-[#B22222] text-white font-medium border-none' : 'bg-white'}`} key={index}>{item}</button>
+                      className={`flex items-center justify-center border border-gray-400 min-w-12 h-12 px-2 rounded-xl  cursor-pointer ${item === size ? 'bg-[#B22222] text-white font-medium border-none' : 'bg-white'}`} key={index}>{item}</button>
             ))}
           </div>
         </div>
-        <button onClick={() => setAdded(true)}
-                className='bg-black text-white px-8 py-3 text-sm cursor-pointer active:bg-gray-700 '>{added ? "GO TO CART" : "ADD TO CART"}</button>
+        <button onClick={() => {/*setAdded(true);*/ addToCart(productData._id, size)}} /*work on the setAdded logic later*/
+                className='bg-black text-white px-8 py-3 text-sm cursor-pointer active:bg-gray-700 '>{/*{added ? "GO TO CART" : "ADD TO CART"}*/}ADD TO CART</button>
                 <hr className='border border-gray-300 mt-8 sm:w-4/5' />
                 <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                 <p>100% Original product.</p>
-                <p>Cash on delivery is available on this product.</p>
                 <p>Easy return and exchange policy within 7 days.</p>
                 </div>
       </div>
