@@ -1,11 +1,11 @@
-import React, {useContext, useState} from 'react'
+import {useContext, useState} from 'react'
 import { assets } from '../assets/assets'
 import { Link, NavLink } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
-    const {setShowSearch, getCartCount} = useContext(ShopContext);
+    const {setShowSearch, getCartCount} = useContext(ShopContext)!;
   return (
     <div className='flex items-center justify-between py-5 max-h-15 font-medium '>
         <Link to={"/"} className='mr-6 sm:mr-8' >
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Sidebar menu for small scren */}
-        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'} `}>
+        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'hidden'} `}>
             <div className='flex flex-col text-gray-600'>
                 <div onClick={()=>setVisible(false)} className='flex items-center gap-2 p-3 cursor-pointer'>
                     <img className='h-4 rotate-180' src={assets.dropdown} alt="dropdown" />

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const About = () => {
   return (
     <div className='flex h-[100vh] bg-gray-800 justify-center items-center text-white'> 

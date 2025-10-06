@@ -1,18 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { ShopContext } from '../context/ShopContext'
+import { useContext, useEffect, useState } from 'react';
+import type { FC } from 'react';
+import type { Product } from '../context/ShopContext';
+import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
 import Title from '../components/Title';
 import ProductItem from '../components/ProductItem';
 
-const Collection = () => {
+const Collection: FC = () => {
 
-  const { products, search, showSearch} = useContext(ShopContext);
+  const { products, search, showSearch} = useContext(ShopContext)!;
   const [showFilter, setShowFilter] = useState(false);
-  const [filterProducts, setFilterProducts] = useState([]);
-  const [subCategory, setSubCategory] = useState([]);
+  const [filterProducts, setFilterProducts] = useState<Product[]>([]);
+  const [subCategory, setSubCategory] = useState<string[]>([]);
   const [sortType, setSortType] = useState('relevant');
 
-  const toggleSubCategory = (e) => {
+  const toggleSubCategory = (e: React.ChangeEvent<HTMLInputElement>) => {
 
     if(subCategory.includes(e.target.value)){
       setSubCategory(prev => prev.filter(item => item !== e.target.value))
@@ -24,7 +26,7 @@ const Collection = () => {
 
   const applyFilter = () => {
 
-    let productsCopy = products.slice();
+    let productsCopy = [...products];
     
     if(showSearch && search){
       productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
@@ -40,15 +42,15 @@ const Collection = () => {
 
   const sortProduct = () => {
 
-    let fpCopy = filterProducts.slice();
+    let fpCopy = [...filterProducts];
 
     switch (sortType) {
       case 'low-high':
-        setFilterProducts(fpCopy.sort((a,b)=>(a.price - b.price)));
+        setFilterProducts([...fpCopy].sort((a,b)=>(a.price - b.price)));
         break;
 
       case 'high-low':
-        setFilterProducts(fpCopy.sort((a,b)=>(b.price - a.price)));
+        setFilterProducts([...fpCopy].sort((a,b)=>(b.price - a.price)));
         break;
 
       default:
@@ -61,7 +63,7 @@ const Collection = () => {
 
   useEffect(()=>{
     applyFilter();
-  },[subCategory, search, showSearch])
+  },[products, subCategory, search, showSearch])
 
   useEffect(()=>{
     sortProduct();

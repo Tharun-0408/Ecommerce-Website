@@ -12,6 +12,7 @@ import filter from "./chevron-right.svg"
 import cross_icon from "./cross.svg"
 import star from "./rating.png"
 import bin from "./bin.svg";
+import empty_cart from "./empty_cart.svg"
 import p_1 from "./p_1.png";
 import p_1a from "./p_1a.png"
 import p_2 from "./p_2.png";
@@ -61,7 +62,8 @@ export const assets = {
   filter,
   cross_icon,
   star,
-  bin
+  bin,
+  empty_cart
 
 };
 

@@ -1,13 +1,13 @@
-import React, {use, useContext, useEffect, useState} from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
-import Product from '../pages/Product';
+import type { Product } from '../context/ShopContext';
 import ProductItem from './ProductItem';
 
 const BestSeller = () => {
 
-    const {products} = useContext(ShopContext); 
-    const [bestSeller, setBestSeller] = useState([]);
+    const { products } = useContext(ShopContext)!; 
+    const [bestSeller, setBestSeller] = useState<Product[]>([]);
 
     useEffect(() => {
         const bestProduct = products.filter((item)=>(item.bestseller));
@@ -35,4 +35,4 @@ const BestSeller = () => {
   )
 }
 
-export default BestSeller
+export default BestSeller;

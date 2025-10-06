@@ -1,4 +1,3 @@
-import React from 'react';
 import { assets } from '../assets/assets';
 
 const Hero = () => {
@@ -24,4 +23,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;
