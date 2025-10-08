@@ -60,7 +60,6 @@ const Collection: FC = () => {
 
   }
 
-
   useEffect(()=>{
     applyFilter();
   },[products, subCategory, search, showSearch])
@@ -70,7 +69,7 @@ const Collection: FC = () => {
   },[sortType])
 
   return (
-    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
+    <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-0'>
       
     {/*Filter options */}
     <div className='min-w-60 accent-blue-500'>
@@ -98,22 +97,22 @@ const Collection: FC = () => {
         <p className='mb-3 text-sm font-medium'>TYPE</p>
         <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Accessories'} onChange={toggleSubCategory} /> Accessories
+            <input className='w-3 cursor-pointer' id='Accesories' type='checkbox' value={'Accessories'} onChange={toggleSubCategory} /> Accessories
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Clothing'} onChange={toggleSubCategory} /> Clothing
+            <input className='w-3 cursor-pointer' id='Clothing' type='checkbox' value={'Clothing'} onChange={toggleSubCategory} /> Clothing
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Collectibles'} onChange={toggleSubCategory} /> Collectibles
+            <input className='w-3 cursor-pointer' id='Collectibles' type='checkbox' value={'Collectibles'} onChange={toggleSubCategory} /> Collectibles
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Merchandise'} onChange={toggleSubCategory} /> Merchandise
+            <input className='w-3 cursor-pointer' id='Merchandise' type='checkbox' value={'Merchandise'} onChange={toggleSubCategory} /> Merchandise
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Plushies'} onChange={toggleSubCategory} /> Plushies
+            <input className='w-3 cursor-pointer' id='Plushies' type='checkbox' value={'Plushies'} onChange={toggleSubCategory} /> Plushies
           </p>
           <p className='flex gap-2'>
-            <input className='w-3 cursor-pointer' type='checkbox' value={'Posters'} onChange={toggleSubCategory} /> Posters
+            <input className='w-3 cursor-pointer' id='Posters' type='checkbox' value={'Posters'} onChange={toggleSubCategory} /> Posters
           </p>
    
         </div>
@@ -127,7 +126,7 @@ const Collection: FC = () => {
     <div className='flex justify-between text-base sm:text-2xl mb-4'>
       <Title text1={'ALL '} text2={'COLLECTIONS'} />
       {/* Product Sort */}
-      <select onChange={(e)=>setSortType(e.target.value)} className='border-2 border-gray-300 text-sm px-2'>
+      <select id='sort' onChange={(e)=>setSortType(e.target.value)} className='border-2 border-gray-300 text-sm px-2'>
 
         <option value="relevant">Sort by: Relevance</option>
         <option value="low-high">Sort by: Low to High</option>

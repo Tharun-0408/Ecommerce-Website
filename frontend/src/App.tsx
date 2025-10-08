@@ -18,9 +18,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App: FC = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <>
+    <Navbar />
+    <div className='pt-24 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <ToastContainer />
-      <Navbar />
+      
       <SearchBar />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -35,6 +37,7 @@ const App: FC = () => {
       </Routes>
       <Footer />
     </div>
+    </>
   )
 }
 

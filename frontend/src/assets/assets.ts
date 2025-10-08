@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import hikari_logo from "./hikari_logo.png"
 import search from "./search.svg";
 import person from "./person.svg";
 import bag from "./bag.svg";
@@ -49,7 +49,8 @@ import p_30 from "./p_30.png";
 
 
 export const assets = {
-  logo,
+
+  hikari_logo,
   search,
   person,
   bag,
