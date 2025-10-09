@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { assets } from './assets/assets';
 import { Routes, Route } from 'react-router-dom';
 import Collection from './pages/Collection'
 import About from './pages/About'
@@ -14,6 +15,7 @@ import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from './context/ScrollToTop';
 
 
 const App: FC = () => {
@@ -24,6 +26,7 @@ const App: FC = () => {
       <ToastContainer />
       
       <SearchBar />
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collection />} />

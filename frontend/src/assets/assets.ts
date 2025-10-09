@@ -1,5 +1,8 @@
 import hikari_logo from "./hikari_logo.png"
+import background from "./background.jpeg"
 import search from "./search.svg";
+import search_white from "./search-white.svg";
+import copyright from "./copyright.svg";
 import person from "./person.svg";
 import bag from "./bag.svg";
 import list from "./list.svg";
@@ -9,6 +12,7 @@ import hero from "./hero.jpg";
 import return_icon from "./return_icon.png";
 import headset from "./headset.svg";
 import filter from "./chevron-right.svg"
+import select from "./chevron-down.svg"
 import cross_icon from "./cross.svg"
 import star from "./rating.png"
 import bin from "./bin.svg";
@@ -51,8 +55,12 @@ import p_30 from "./p_30.png";
 export const assets = {
 
   hikari_logo,
+  background,
   search,
+  search_white,
+  copyright,
   person,
+  select,
   bag,
   list,
   dropdown,

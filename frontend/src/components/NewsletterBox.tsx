@@ -6,7 +6,7 @@ const NewsletterBox = () => {
 
   return (
     <div className='text-center'>
-        <p className='text-2xl font-medium text-gray-800'>Subscribe now & get 20% off</p>
+        <p className='text-xl font-semibold text-gray-800'>Subscribe now & get 20% off</p>
         <p className='text-gray-400 mt-3'>
             This is dummy text to check how the text will look like in this section.
         </p>
