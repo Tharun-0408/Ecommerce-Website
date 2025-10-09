@@ -70,13 +70,11 @@ const Collection: FC = () => {
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-0'>
-      
-    
 
     {/* Right Side */}
     <div className='flex-1'>
       
-    <div className='flex justify-between text-base sm:text-2xl mb-4'>
+    <div className='flex justify-between sm:text-3xl mb-4'>
       <Title text1={'ALL '} text2={'COLLECTIONS'} />
       {/* Product Sort */}
       <div className='relative inline-block'>
@@ -91,7 +89,7 @@ const Collection: FC = () => {
       </div>
     </div>
     {/*Filter options */}
-    <div className=' accent-blue-500'>
+    <div className='pl-2 accent-blue-500'>
       <p onClick={()=>setShowFilter(prev => !prev)} className='mt-2 text-md flex items-center cursor-pointer gap-2'>FILTERS
         <img className={`h-3 sm:hidden transition-transform duration-100 ease-in-out ${showFilter ? 'rotate-90' : ''}`} src={assets.filter} />
       </p>
@@ -142,7 +140,7 @@ const Collection: FC = () => {
     <div className='grid grid-cols-2 md:grid-cols-4 gap-4 gap-y-6'>
       {
         filterProducts.map((item, index)=>(
-          <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image}/>
+          <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} sizes={item.sizes}/>
         ))
       }
     </div>

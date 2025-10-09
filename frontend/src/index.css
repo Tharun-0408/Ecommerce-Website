@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 /* Base state for all nav links */
@@ -14,14 +14,14 @@
 .nav-item::after {
   content: '';
   position: absolute;
-  bottom: -4px; /* distance from text */
+  bottom: -5px; /* distance from text */
   left: 50%;
   transform: translateX(-50%) scaleX(0); /* start collapsed at center */
-  transform-origin: center; /* expand from center */
+  transform-origin: left; /* expand from left */
   width: 100%; /* full width of link */
-  height: 1.5px; /* thickness of underline */
-  background-color: #4a5568; /* Tailwind gray-700 */
-  transition: transform 0.25s ease-in-out;
+  height: 3px; /* thickness of underline */
+  background-color: #d15a05; /* Tailwind gray-700 */
+  transition: transform 0.40s ease-in-out;
 }
 
 /* Hover effect: animate line expanding from center */
@@ -31,8 +31,12 @@
 
 /* Active link underline: NavLink automatically adds 'active' class */
 .nav-item.active::after {
-  transform: translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(0);
   
+}
+
+.nav-item.active:hover::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 /* Optional: change color on hover */
@@ -40,13 +44,25 @@
   color: #1f2937; /* Tailwind gray-800 */
 }
 *{
-  font-family: Outfit;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight:700;
 }
-.prata-regular {
-  font-family: "Prata", serif;
+
+.roboto{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 275;
+}
+
+.roboto-medium{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+.roboto-regular{
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
+
 
 ::-webkit-scrollbar{
   display: none;

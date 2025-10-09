@@ -10,15 +10,15 @@ const Footer = () => {
   {/* Logo */}
   <div className='flex-1 flex-col items-center sm:items-start'>
       <img src={assets.hikari_logo} className='mb-5 pt-1.75 w-auto h-[1.85rem]' alt='' />
-      <p className='w-full md:w-3/4 text-gray-600 text-center sm:text-left'>
-        Hikari is a trendy jewellery brand offering stylish, modern pieces with a cool aesthetic, perfect for adding a touch of elegance and personality to any look. Each piece is crafted to combine quality, affordability, and unique design, letting you express your individual style every day.
+      <p className='w-full md:w-3/4 text-gray-600 sm:text-sm roboto-regular'>
+       Hikari is a trendy jewellery brand offering stylish, modern pieces that combine quality, affordability, and unique design, letting you express your style every day.
       </p>
   </div>
 
   {/* Company */}
   <div className='flex-1 flex-col items-center sm:items-start'>
       <p className='text-[1.5rem] font-medium mb-4'>COMPANY</p>
-      <ul className='flex flex-col gap-1 text-gray-600'>
+      <ul className='flex flex-col gap-1 text-gray-600 roboto sm:text-base'>
           <li onClick={()=> navigate('/')}><span className='hover:text-black hover:cursor-pointer'>Home</span></li>
           <li onClick={()=> navigate('/about')}><span className='hover:text-black hover:cursor-pointer'>About us</span></li>
           <li onClick={()=> navigate('/orders')}><span className='hover:text-black hover:cursor-pointer'>Delivery</span></li>
@@ -27,9 +27,9 @@ const Footer = () => {
   </div>
 
   {/* Get in touch */}
-  <div className='flex flex-col items-center sm:items-start'>
+  <div className='flex flex-col sm:items-start'>
       <p className='text-[1.5rem] font-medium mb-4'>GET IN TOUCH</p>
-      <ul className='flex flex-col gap-1 text-gray-600'>
+      <ul className='flex flex-col gap-1 text-gray-600 text-base roboto'>
           <li>+1-212-456-7890</li>
           <li>tharunreddy04.work@gmail.com</li>
       </ul>

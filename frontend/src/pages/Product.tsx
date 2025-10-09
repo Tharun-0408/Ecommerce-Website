@@ -23,16 +23,26 @@ const Product = () => {
       }
   };
 
+    const handleAddToCart = () => {
+      if(!size) return;
+      addToCart(productData!._id, size);
+      setAdded(true);
+      setTimeout(() => {
+        setAdded(false);
+      }, 1000);
+    };
+
   useEffect(() => {
     setAdded(false);
   },[size])
   
   useEffect(()=>{
     fetchProductData();
+    setSize('');
   },[productId, products])
 
   return productData ? (
-    <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
+    <div className='pt-10 transition-opacity ease-in duration-500 opacity-100'>
       {/*----------Product Data--------------- */}
       <div className='flex gap-12 sm:gap-12 flex-col sm:flex-row'>
 
@@ -63,7 +73,7 @@ const Product = () => {
             <p className='pl-2'>(132)</p>
         </div>
         <p className='font-medium mt-2'>{currency}{productData.price}</p>
-        <p className='mt-5 text-gray-500 md:w-4/5'>{productData.description}</p>
+        <p className='mt-5 text-gray-500 md:w-4/5 roboto'>{productData.description}</p>
         <div className='flex flex-col gap-4 my-8'>
           <p>Select Size</p>
           <div className='flex gap-2'>
@@ -73,12 +83,10 @@ const Product = () => {
             ))}
           </div>
         </div>
-        <button onClick={() => {/*setAdded(true);*/ 
-                  if(!size) return;
-                  addToCart(productData._id, size)}} /*work on the setAdded logic later*/
-                className='bg-black text-white px-8 py-3 text-sm cursor-pointer active:bg-gray-700 '>{/*{added ? "GO TO CART" : "ADD TO CART"}*/}ADD TO CART</button>
+        <button onClick={handleAddToCart} 
+                className='bg-black text-white px-8 py-3 text-sm cursor-pointer active:bg-gray-700 '>{added ? "ADDED TO CART" : "ADD TO CART"}</button>
                 <hr className='border border-gray-300 mt-8 sm:w-4/5' />
-                <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
+                <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1 sm:mb-6'>
                 <p>100% Original product.</p>
                 <p>Easy return and exchange policy within 7 days.</p>
                 </div>

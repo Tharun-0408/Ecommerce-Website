@@ -22,8 +22,8 @@ const App: FC = () => {
   return (
     <>
     <Navbar />
+    <ToastContainer />
     <div className='pt-24 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
-      <ToastContainer />
       
       <SearchBar />
       <ScrollToTop />
