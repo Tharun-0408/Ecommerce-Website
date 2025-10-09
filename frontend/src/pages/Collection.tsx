@@ -80,7 +80,7 @@ const Collection: FC = () => {
       <Title text1={'ALL '} text2={'COLLECTIONS'} />
       {/* Product Sort */}
       <div className='relative inline-block'>
-      <select id='sort' onChange={(e)=>setSortType(e.target.value)} className='appearance-none border-2 border-gray-400 text-[0.7rem]  sm:text-sm md:text-base lg:text-lg cursor-pointer pl-2 pr-2 py-1 w-[8.5rem] sm:w-[10rem] md:w-[12rem] rounded-xs h-8 sm:h-9 md:h-10 '>
+      <select id='sort' onChange={(e)=>setSortType(e.target.value)} className='appearance-none border-2 border-gray-400 text-[0.7rem]  sm:text-sm md:text-base lg:text-base cursor-pointer pl-2 pr-4 py-1 w-[8.5rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] rounded-xs h-8 sm:h-9 md:h-10 '>
         <option value="relevant">Sort by: Relevance</option>
         <option value="low-high">Sort by: Low to High</option>
         <option value="high-low">Sort by: High to Low</option>
