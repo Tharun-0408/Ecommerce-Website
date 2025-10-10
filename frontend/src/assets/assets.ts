@@ -6,13 +6,13 @@ import copyright from "./copyright.svg";
 import person from "./person.svg";
 import bag from "./bag.svg";
 import list from "./list.svg";
-import dropdown from "./chevron-left.svg";
+import left_arrow from "./chevron-left.svg";
 import exchange from "./exchange_icon.png";
 import hero from "./hero.jpg";
 import return_icon from "./return_icon.png";
 import headset from "./headset.svg";
-import filter from "./chevron-right.svg"
-import select from "./chevron-down.svg"
+import right_arrow from "./chevron-right.svg"
+import down_arrow from "./chevron-down.svg"
 import cross_icon from "./cross.svg"
 import star from "./rating.png"
 import bin from "./bin.svg";
@@ -60,15 +60,15 @@ export const assets = {
   search_white,
   copyright,
   person,
-  select,
+  down_arrow,
+  right_arrow,
+  left_arrow,
   bag,
   list,
-  dropdown,
   hero,
   exchange,
   return_icon,
   headset,
-  filter,
   cross_icon,
   star,
   bin,

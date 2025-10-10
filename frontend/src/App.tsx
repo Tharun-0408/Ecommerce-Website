@@ -23,7 +23,7 @@ const App: FC = () => {
     <>
     <Navbar />
     <ToastContainer />
-    <div className='pt-24 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+    <div className='pt-24 px-3 sm:px-[2vw] md:px-[4vw] lg:px-[5vw]'>
       
       <SearchBar />
       <ScrollToTop />

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import type { Product } from '../context/ShopContext';
 import Title from './Title';
@@ -13,16 +13,16 @@ const RelatedProducts = ({ subCategory, currentId }: RelatedProductsProps) => {
 
     const { products } = useContext(ShopContext)!;
     const [related, setRelated] = useState<Product[]>([]);
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
 
     useEffect(() => {
-        
         if(products.length > 0){
-          
-            const filtered = products.filter((item) => subCategory === item.subCategory && item._id !== currentId );
-            
-            setRelated(filtered.slice(0, 5));
+            const filtered = products.filter((item) => subCategory === item.subCategory && item._id !== currentId);
+            setRelated(filtered);
         }
-
     },[products, currentId, subCategory])
 
   return (

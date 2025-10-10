@@ -1,5 +1,6 @@
 import { assets } from '../assets/assets';
 import { useNavigate } from 'react-router-dom';
+import ScrollToTop from '../context/ScrollToTop';
 
 const Footer = () => {
 
@@ -19,9 +20,9 @@ const Footer = () => {
   <div className='flex-1 flex-col items-center sm:items-start'>
       <p className='text-[1.5rem] font-medium mb-4'>COMPANY</p>
       <ul className='flex flex-col gap-1 text-gray-600 roboto sm:text-base'>
-          <li onClick={()=> navigate('/')}><span className='hover:text-black hover:cursor-pointer'>Home</span></li>
-          <li onClick={()=> navigate('/about')}><span className='hover:text-black hover:cursor-pointer'>About us</span></li>
-          <li onClick={()=> navigate('/orders')}><span className='hover:text-black hover:cursor-pointer'>Delivery</span></li>
+          <ScrollToTop to='/'><span className='hover:text-black hover:cursor-pointer inline-block'>Home</span></ScrollToTop>
+          <ScrollToTop to='/about'><span className='hover:text-black hover:cursor-pointer'>About us</span></ScrollToTop>
+          <ScrollToTop to='/orders'><span className='hover:text-black hover:cursor-pointer'>Delivery</span></ScrollToTop>
           <li><span className='hover:text-black hover:cursor-pointer'>Privacy policy</span></li>
       </ul>
   </div>
