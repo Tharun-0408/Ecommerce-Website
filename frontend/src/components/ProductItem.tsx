@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { Link } from "react-router-dom"
-
+import LazyImage from './LazyImage'
 
   interface ProductItemProps {
   id: string;
@@ -19,7 +19,7 @@ const ProductItem = ({ id, image, name, price, sizes }: ProductItemProps) => {
     <Link className='text-gray-700 cursor-pointer' to={`/product/${id}`}>
         <div className='flex flex-col border-gray-200 hover:shadow-xl min-h-80 px-2 '>
         <div className='overflow-hidden py-2'>
-            <img src={image[0]} alt={name} />
+            <LazyImage src={image[0]} alt={name} />
         </div>
         <p className='pt-3 pb-1 text-base'>{name}</p>
 
