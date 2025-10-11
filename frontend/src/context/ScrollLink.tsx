@@ -3,12 +3,12 @@ import type { ReactNode } from 'react';
 import type { FC } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-interface ScrollToTopProps {
+interface ScrollLinkProps {
   to: string;
   children: ReactNode;
 }
 
-const ScrollToTop: FC<ScrollToTopProps> = ({to, children}) => {
+const ScrollLink: FC<ScrollLinkProps> = ({to, children}) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
@@ -31,4 +31,4 @@ const ScrollToTop: FC<ScrollToTopProps> = ({to, children}) => {
   );
 };
 
-export default ScrollToTop;
+export default ScrollLink;

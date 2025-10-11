@@ -69,7 +69,7 @@ const Navbar = () => {
         <div className={`fixed top-0 right-0 bottom-0 bg-white transition-all ${visible ? 'w-2/3 left-0 shadow-xl border-none' : 'hidden'} `}>
             <div className='flex flex-col text-gray-600'>
                 <div onClick={()=>setVisible(false)} className='flex items-center gap-2 p-3 cursor-pointer'>
-                    <img className='h-4 rotate-180' src={assets.dropdown} alt="dropdown" />
+                    <img className='h-4' src={assets.left_arrow} alt="dropdown" />
                     <p>Back</p>
                 </div>
                 

@@ -83,15 +83,15 @@ const Collection: FC = () => {
         <option value="low-high">Sort by: Low to High</option>
         <option value="high-low">Sort by: High to Low</option>
       </select>
-      <div className='pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 md:px-4 sm:px-2 max-[360px]:top-[-40%]'>
-        <img src={assets.select} className='w-3 h-3 sm:w-3 sm:h-4' alt='' />
+      <div className='pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 md:px-4 sm:px-2 '>
+        <img src={assets.down_arrow} className='w-3 h-3 sm:w-3 sm:h-4' alt='' />
       </div>
       </div>
     </div>
     {/*Filter options */}
     <div className='pl-2 accent-blue-500'>
       <p onClick={()=>setShowFilter(prev => !prev)} className='mt-2 text-md flex items-center cursor-pointer gap-2'>FILTERS
-        <img className={`h-3 sm:hidden transition-transform duration-100 ease-in-out ${showFilter ? 'rotate-90' : ''}`} src={assets.filter} />
+        <img className={`h-3 sm:hidden transition-transform duration-100 ease-in-out ${showFilter ? 'rotate-90' : ''}`} src={assets.right_arrow} />
       </p>
       {/* Category filter 
       <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>

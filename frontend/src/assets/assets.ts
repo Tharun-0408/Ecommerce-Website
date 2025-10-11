@@ -11,12 +11,14 @@ import exchange from "./exchange_icon.png";
 import hero from "./hero.jpg";
 import return_icon from "./return_icon.png";
 import headset from "./headset.svg";
-import right_arrow from "./chevron-right.svg"
-import down_arrow from "./chevron-down.svg"
-import cross_icon from "./cross.svg"
-import star from "./rating.png"
+import right_arrow from "./chevron-right.svg";
+import down_arrow from "./chevron-down.svg";
+import cross_icon from "./cross.svg";
+import star from "./rating.png";
 import bin from "./bin.svg";
-import empty_cart from "./empty_cart.svg"
+import empty_cart from "./empty_cart.svg";
+import heart from "./heart.svg";
+import filled_heart from "./heart-fill.svg";
 import p_1 from "./p_1.png";
 import p_1a from "./p_1a.png"
 import p_2 from "./p_2.png";
@@ -72,7 +74,9 @@ export const assets = {
   cross_icon,
   star,
   bin,
-  empty_cart
+  empty_cart,
+  heart,
+  filled_heart,
 
 };
 
