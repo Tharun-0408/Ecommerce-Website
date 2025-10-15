@@ -13,7 +13,7 @@ interface Props {
 const ShopContextProvider = ({children}: Props)  => {
 
     const currency = '₹';
-    const delivery_fee = 10;
+    const delivery_fee = 50;
     const [search, setSearch] = useState<string>('');
     const [showSearch, setShowSearch] = useState<boolean>(false);
     const [cartItems, setCartItems] = useState<CartItems>({});
@@ -60,6 +60,24 @@ const getCartCount = (): number => {
   return totalCount;
 };
 
+const getCartAmount = (): number => {
+    let totalAmount = 0;
+    for(const itemId in cartItems){
+        const itemInfo = products.find((product)=> product._id === itemId);
+        if(!itemInfo) continue;
+        for(const size in cartItems[itemId]){
+            try{
+                if(cartItems[itemId][size] > 0){
+                    totalAmount += itemInfo.price * cartItems[itemId][size];
+                }
+            }catch(err){
+                console.error(`Error calculating amount for item ${itemId} of size ${size}:`, err);
+            }
+        }
+    }
+    return totalAmount;
+}
+
 const updateQuantity = (itemId: string, size:string, quantity:number) => {
     const cartData = structuredClone(cartItems);
 
@@ -78,7 +96,7 @@ const updateQuantity = (itemId: string, size:string, quantity:number) => {
         products, currency, delivery_fee,
         search, setSearch, showSearch, setShowSearch,
         cartItems, addToCart,
-        getCartCount, updateQuantity
+        getCartCount, updateQuantity, getCartAmount
     }
 
     return (

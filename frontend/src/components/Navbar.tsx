@@ -25,7 +25,7 @@ const Navbar = () => {
         <img className='h-[clamp(2.2rem,2.5vw,3rem)] w-auto object-contain' src={assets.hikari_logo} alt='logo' />
         </Link>
 
-        <ul className='hidden sm:flex gap-4 sm:gap-6 md:gap-6 lg:gap-12 md:max-w-[60%] md:text-sm lg:text-[1.5rem] text-gray-700 justify-center items-center md:flex-shrink-1'>
+        <ul className='hidden sm:flex gap-4 sm:gap-6 md:gap-6 lg:gap-12 md:max-w-[60%] md:text-sm lg:text-[1.5rem] justify-center items-center md:flex-shrink-1'>
             <NavLink to='/' className='nav-item flex flex-col items-center gap-1 relative'>
                 <p>HOME</p>
             </NavLink>
@@ -51,7 +51,7 @@ const Navbar = () => {
                 <img className='min-w-7 w-7 cursor-pointer' src={assets.person} alt='person'/>
 
                 <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
-                    <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
+                    <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-black rounded'>
                         <p className='cursor-pointer hover:text-black'>My Profile</p>
                         <p className='cursor-pointer hover:text-black'>Orders</p>
                         <p className='cursor-pointer hover:text-black'>Login</p>

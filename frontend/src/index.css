@@ -6,7 +6,7 @@
   position: relative; /* required for pseudo-element positioning */
   display: inline-block;
   text-decoration: none;
-  color: #4a5568; /* Tailwind gray-700 */
+  color: black; /* Tailwind gray-700 */
   transition: color 0.2s ease;
 }
 
@@ -20,7 +20,7 @@
   transform-origin: left; /* expand from left */
   width: 100%; /* full width of link */
   height: 3px; /* thickness of underline */
-  background-color: #d15a05; /* Tailwind gray-700 */
+  background-color: #222121; /* Tailwind gray-700 */
   transition: transform 0.40s ease-in-out;
 }
 
@@ -41,7 +41,7 @@
 
 /* Optional: change color on hover */
 .nav-item:hover {
-  color: #1f2937; /* Tailwind gray-800 */
+  color: #4b4e51; /* Tailwind gray-800 */
 }
 *{
   font-family: 'Barlow Condensed', sans-serif;

@@ -18,7 +18,6 @@ import star from "./rating.png";
 import bin from "./bin.svg";
 import empty_cart from "./empty_cart.svg";
 import heart from "./heart.svg";
-import filled_heart from "./heart-fill.svg";
 import p_1 from "./p_1.png";
 import p_1a from "./p_1a.png"
 import p_2 from "./p_2.png";
@@ -76,7 +75,7 @@ export const assets = {
   bin,
   empty_cart,
   heart,
-  filled_heart,
+
 
 };
 
